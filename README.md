@@ -8,7 +8,7 @@ Setup project and start storybook
 yarn install; yarn storybook
 ```
 
-Go to the Button Component story and in the controls panel you can change one of the props. Notice that every time you change a prop the number on the button changes, indicated it was un-mounted and remounted again.
+Go to the `Button` story and in the controls panel you can change one of the props. Notice that every time you change a prop the number on the button changes, indicated it was un-mounted and remounted again.
 
 ## Expected result
 
