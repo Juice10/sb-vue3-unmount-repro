@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }} {{ number }}</button>
 </template>
 
 <script>
@@ -27,6 +27,14 @@ export default {
     backgroundColor: {
       type: String,
     },
+  },
+  data() {
+    return {
+      number: 0
+    }
+  },
+  mounted() {
+    this.number = Math.floor(Math.random() * 100)
   },
 
   emits: ['click'],

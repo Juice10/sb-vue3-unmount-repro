@@ -1,24 +1,15 @@
-# sb-vue3-repro
+# Storybook unmounts Vue components when args change, stopping css transitions from working.
 
-## Project setup
-```
-npm install
-```
+## Reproduce
+To reproduce the issue run the following:
 
-### Compiles and hot-reloads for development
+Setup project and start storybook
 ```
-npm run serve
+yarn install; yarn storybook
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Go to the Button Component story and in the controls panel you can change one of the props. Notice that every time you change a prop the number on the button changes, indicated it was un-mounted and remounted again.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Expected result
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Whenever a prop changes, the component should stay mounted, keeping its internal data.
